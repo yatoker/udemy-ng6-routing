@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
   onButtonClick(){
+    //Absolute path.
     this.router.navigate(['/servers']);
   }
 
