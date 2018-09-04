@@ -1,18 +1,22 @@
 <div class="row">
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
-      <a [routerLink]="['/servers', server.id]" 
+      <a 
+        [routerLink]="['/servers', server.id]"
         [queryParams]="{allowEdit:1}"
-        fragment="loading"
-        class="list-group-item" *ngFor="let server of servers">
+        fragment="loading" class="list-group-item" *ngFor="let server of servers">
         {{ server.name }}
       </a>
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <app-edit-server></app-edit-server>
+
+    <!-- This has to be here at servers comp. also  because components of child routes will be must be loaded here.-->
+    <router-outlet></router-outlet>
+
+    <!-- <app-edit-server></app-edit-server>
     <hr>
-    <app-server></app-server>
-    <button class="btn btn-primary" (click)="onButtonClick()">Go to server</button>
+    
+    <button class="btn btn-primary" (click)="onButtonClick()">Go to server</button> -->
   </div>
 </div>
