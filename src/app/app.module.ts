@@ -16,16 +16,17 @@ import { Routes, RouterModule } from '@angular/router';
 //appRoutes is the property holding the routing declarations
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'users', component: UsersComponent, children:[
-    { path: ':id/:name', component: UserComponent }
-  ] },
+  {
+    path: 'users', component: UsersComponent, children: [
+      { path: ':id/:name', component: UserComponent }
+    ]
+  },
   {
     path: 'servers', component: ServersComponent, children: [
       { path: ':id', component: ServerComponent },
       { path: ':id/edit', component: EditServerComponent }
     ]
   },
-
 ]
 
 @NgModule({
