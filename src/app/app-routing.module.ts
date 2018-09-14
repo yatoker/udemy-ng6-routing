@@ -35,7 +35,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes) // Here appRoutes must be specified to make angular know about the routing info.
+        RouterModule.forRoot(appRoutes, { useHash: true }) // Here appRoutes must be specified to make angular know about the routing info.
     ],
     exports: [
         RouterModule
