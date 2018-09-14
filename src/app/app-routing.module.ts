@@ -25,10 +25,10 @@ const appRoutes: Routes = [
         canActivateChild: [AuthGuard], // applies to all child routes. 
         component: ServersComponent, children: [
             { path: ':id', component: ServerComponent },
-            { path: ':id/edit', component: EditServerComponent, canDeactivate:[CanDeactivateGuard] }
+            { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGuard] }
         ]
     },
-    {path:'not-found', component: ErrorPageComponent, data: {message: 'Page not found!!!'}},
+    { path: 'not-found', component: ErrorPageComponent, data: { message: 'Page not found!!!' } },
     { path: '**', redirectTo: '/not-found' },
 ]
 
